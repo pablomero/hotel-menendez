@@ -1,0 +1,201 @@
+/*
+#000000 darkgray
+#A45D5D
+#FFD700 Gold
+#DAA520 GoldenRod
+#B8860B DarkGoldenRod
+#FAFAD2 LightGoldenRodYellow
+#EEE8AA PaleGoldenRod
+#EFEFEF
+*/
+* {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #EFEFEF;
+}
+
+header {
+  background-color: #000000DD;
+  border-bottom: 1px solid #A45D5D;
+}
+
+@font-face {
+  font-family: PirateOne;
+  src: url("../assets/fonts/PirataOne-Regular.ttf");
+}
+
+.titulo {
+  color: #DAA520;
+  font-size: 86px;
+  padding: 50px;
+  font-family: PirateOne;
+  text-align: center;
+  text-shadow: 3px 3px 10px #A45D5D;
+}
+
+.subtitulo {
+  background-color: #B8860B;
+  border-radius: 10px;
+  color: #000000;
+  display: inline-block;
+  font-family: PirateOne;
+  font-size: 48px;
+  padding: 0px 10px;
+  text-shadow: 3px 3px 10px #A45D5D;
+}
+
+.navdiv {
+  background-color: #000000DD;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+}
+
+.navdiv nav ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.navdiv nav ul a {
+  color: #DAA520;
+  display: inline-block;
+  font-family: PirateOne;
+  font-size: 32px;
+  padding: 10px 40px;
+}
+
+.navdiv nav ul a:hover {
+  color: #FFD700;
+  text-shadow: 3px 3px 10px #A45D5D;
+}
+
+.activo {
+  color: #FFD700 !important;
+  text-shadow: 3px 3px 10px #A45D5D;
+}
+
+.fondoHotel {
+  background-color: #A45D5D;
+  background-image: url("../assets/img/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid #A45D5D;
+  height: 45vw;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 150px 20px;
+  grid-template-columns: 45vw 45vw;
+  justify-content: center;
+  margin: 100px 20px;
+}
+
+.grid-item {
+  align-items: end;
+  background-position: center;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 460px;
+}
+
+.grid-item p {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.grid-item1 {
+  background-image: url("../assets/img/frente.jpg");
+}
+
+.grid-item2 {
+  background-image: url("../assets/img/restaurant.jpg");
+}
+
+.grid-item3 {
+  background-image: url("../assets/img/estacionamiento.jpg");
+}
+
+.grid-item4 {
+  background-image: url("../assets/img/sala.jpg");
+}
+
+footer {
+  align-items: center;
+  background-color: #000000DD;
+  border-top: 1px solid #A45D5D;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer p {
+  color: #EFEFEF;
+}
+
+footer li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+footer li img {
+  filter: invert(1);
+}
+
+/*vista tablet*/
+@media only screen and (min-width:670px) and (max-width:930px) {
+  .titulo {
+    font-size: 64px;
+    padding: 20px;
+  }
+
+  .subtitulo {
+    font-size: 36px;
+    padding: 0px 10px;
+  }
+
+  .grid-item p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .navdiv nav ul a {
+    color: #DAA520;
+    display: inline-block;
+    font-family: PirateOne;
+    font-size: 28px;
+    padding: 10px 20px;
+  }
+}
+
+/*vista mobil*/
+@media only screen and (min-width:0px) and (max-width:699px) {
+  .titulo {
+    display: none;
+  }
+
+  .navdiv {
+    display: none;
+  }
+}
