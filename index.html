@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" href="assets/img/crown.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animaciones.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title>Hotel Virrey Pedro de Melo</title>
   </head>
 
@@ -16,15 +17,25 @@
       <header>
         <h1 class="titulo"> Hotel Virrey Pedro de Melo </h1>
       </header>
-      <div class="navdiv wow animate_animated animate__jello">
-        <nav>
-          <ul>
-            <li><a href="#" class="activo">Inicio</a></li>
-            <li><a href="pages/hotel.html">Hotel</a></li>
-            <li><a href="pages/servicios.html">Servicios</a></li>
-            <li><a href="pages/ubicacion.html">Ubicación</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-          </ul>
+      <div class="navdiv">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <div class="logo">
+            <img src="../assets/img/crown.png" alt="corona">
+            <h1 class="H">H</h1>
+            <h1 class="V">V</h1>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="activo">Inicio</a></li>
+              <li class="nav-item"><a href="pages/hotel.html">Hotel</a></li>
+              <li class="nav-item"><a href="pages/servicios.html">Servicios</a></li>
+              <li class="nav-item"><a href="pages/ubicacion.html">Ubicación</a></li>
+              <li class="nav-item"><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
       <div class="fondoHotel">
@@ -63,10 +74,10 @@
           <li><a target="_blank" href="http://www.twitter.com"><img src="assets/img/twitter.svg" alt="twitter" /></a></li>
           <li><a target="_blank" href="http://www.instagram.com"><img src="assets/img/camera.svg" alt="instagram" /></a></li>
         </ul>
-        <p>email</p>
-        <p>direccion</p>
       </footer>
     </main>
+    <script src="bootstrap/js/bootstrap.min.js">
+    </script>
   </body>
 
 </html>
