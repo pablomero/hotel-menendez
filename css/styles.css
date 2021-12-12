@@ -100,9 +100,13 @@ header {
   background-image: url("../assets/img/bg.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   border: 1px solid #A45D5D;
   height: 45vw;
+}
+
+.hero-text {
+  text-align: center;
 }
 
 .grid-container {
@@ -122,28 +126,48 @@ header {
   height: 460px;
   justify-content: space-evenly;
   margin: 20px;
+  padding: 100px;
 }
 
 .grid-item p {
+  background-image: linear-gradient(#00000055, #00000055);
+  border-radius: 5px;
+  color: white;
   font-size: 20px;
   line-height: 1.5;
+  padding: 10px;
   text-align: justify;
+  text-shadow: #000000 2px 2px;
+}
+
+.grid-item p:hover {
+  animation-name: higlight;
+  animation-duration: 1s;
+}
+
+@keyframes higlight {
+  10% {
+      background-color: #FAFAD2;
+  }
+  100% {
+    background-color: none;
+  }
 }
 
 .grid-item1 {
-  background-image: url("../assets/img/frente.jpg");
+  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/frente.jpg");
 }
 
 .grid-item2 {
-  background-image: url("../assets/img/restaurant.jpg");
+  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/restaurant.jpg");
 }
 
 .grid-item3 {
-  background-image: url("../assets/img/estacionamiento.jpg");
+  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/estacionamiento.jpg");
 }
 
 .grid-item4 {
-  background-image: url("../assets/img/sala.jpg");
+  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/sala.jpg");
 }
 
 .containerMapa {
@@ -290,7 +314,6 @@ footer li img {
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: column;
-    height: auto;
     align-items: center;
   }
 
@@ -301,32 +324,24 @@ footer li img {
   }
 
   .grid-item1 {
-    height: 60vw;
-    margin-bottom: 20px;
+    height: 110vw;
     width: 90vw;
   }
 
   .grid-item2 {
-    height: 60vw;
-    margin-bottom: 20px;
+    height: 110vw;
     width: 90vw;
   }
 
   .grid-item3 {
-    height: 60vw;
-    margin-bottom: 20px;
+    height: 110vw;
     width: 90vw;
   }
 
   .grid-item4 {
-    height: 60vw;
-    margin-bottom: 20px;
+    height: 110vw;
     width: 90vw;
   }
-
-#hotel-row-2 {
-  flex-direction: column-reverse;
-}
 
   footer ul {
     margin: 0px;
