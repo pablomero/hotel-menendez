@@ -126,7 +126,7 @@ header {
   height: 460px;
   justify-content: space-evenly;
   margin: 20px;
-  padding: 100px;
+  padding: 20px;
 }
 
 .grid-item p {
@@ -134,7 +134,7 @@ header {
   border-radius: 5px;
   color: white;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1.4;
   padding: 10px;
   text-align: justify;
   text-shadow: #000000 2px 2px;
@@ -185,6 +185,21 @@ header {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+.btn-form {
+  background-color: #EEE8AA;
+  color: #000000;
+  font-weight: bolder;
+}
+
+.btn-form:hover {
+  background-color: #B8860B;
+}
+
+.form-control {
+  border: 5px ridge #B8860B;
+  border-radius: 5px;
 }
 
 footer {
@@ -324,22 +339,22 @@ footer li img {
   }
 
   .grid-item1 {
-    height: 110vw;
+    height: 50vh;
     width: 90vw;
   }
 
   .grid-item2 {
-    height: 110vw;
+    height: 50vh;
     width: 90vw;
   }
 
   .grid-item3 {
-    height: 110vw;
+    height: 50vh;
     width: 90vw;
   }
 
   .grid-item4 {
-    height: 110vw;
+    height: 50vh;
     width: 90vw;
   }
 
