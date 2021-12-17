@@ -1,88 +1,107 @@
+@import "_variables";
+
 * {
   font-family: sans-serif;
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+}
 
 li {
-  list-style: none; }
+  list-style: none;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 body {
-  background-color: #EFEFEF; }
+  background-color: $white;
+}
 
 header {
   display: flex;
   justify-content: center;
   background-color: #000000DD;
-  border-bottom: 1px solid #A45D5D; }
+  border-bottom: 1px solid $red;
+}
 
 @font-face {
   font-family: PirateOne;
-  src: url("../assets/fonts/PirataOne-Regular.ttf"); }
+  src: url("../assets/fonts/PirataOne-Regular.ttf");
+}
 
 .titulo {
-  color: #DAA520;
+  color: $goldrod;
   font-size: 86px;
   padding: 50px;
   font-family: PirateOne;
   text-align: center;
-  text-shadow: 3px 3px 10px #A45D5D; }
+  text-shadow: 3px 3px 10px $red;
+}
 
 .logo {
-  display: none; }
+  display: none;
+}
 
 .subtitulo {
-  background-color: #B8860B;
+  background-color: $darkgoldrod;
   border-radius: 10px;
-  color: #000000;
+  color: $black;
   display: inline-block;
   font-family: PirateOne;
   font-size: 48px;
   padding: 0px 10px;
-  text-shadow: 3px 3px 10px #A45D5D; }
+  text-shadow: 3px 3px 10px $red;
+}
 
 .navdiv {
   background-color: #000000DD;
   position: sticky;
   top: 0px;
-  width: 100%; }
-  .navdiv nav div ul {
+  width: 100%;
+  & nav div ul {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 100%; }
-    .navdiv nav div ul a {
-      color: #DAA520;
+    width: 100%;
+    & a {
+      color: $goldrod;
       display: inline-block;
       font-family: PirateOne;
       font-size: 32px;
-      padding: 0px 40px; }
-      .navdiv nav div ul a:hover {
-        color: #FFD700;
-        text-shadow: 3px 3px 10px #A45D5D; }
+      padding: 0px 40px;
+      &:hover {
+        color: $gold;
+        text-shadow: 3px 3px 10px $red;
+      }
+    }
+  }
+}
 
 .activo {
-  color: #FFD700 !important;
-  text-shadow: 3px 3px 10px #A45D5D; }
+  color: $gold !important;
+  text-shadow: 3px 3px 10px $red;
+}
 
 .fondoHotel {
-  background-color: #A45D5D;
+  background-color: $red;
   background-image: url("../assets/img/bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid #A45D5D;
-  height: 45vw; }
+  border: 1px solid $red;
+  height: 45vw;
+}
 
 .hero-text {
-  text-align: center; }
+  text-align: center;
+}
 
 .grid-container {
   display: grid;
   grid-template-columns: 45vw 45vw;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .grid-item {
   align-items: end;
@@ -95,43 +114,54 @@ header {
   height: 460px;
   justify-content: space-evenly;
   margin: 20px;
-  padding: 100px; }
-  .grid-item p {
+  padding: 100px;
+  & p {
     background-image: linear-gradient(#00000055, #00000055);
     border-radius: 5px;
-    color: #EFEFEF;
+    color: $white;
     font-size: 20px;
     line-height: 1.5;
     padding: 10px;
     text-align: justify;
-    text-shadow: #000000 2px 2px; }
-    .grid-item p:hover {
+    text-shadow: $black 2px 2px;
+    &:hover {
       animation-name: higlight;
-      animation-duration: 1s; }
+      animation-duration: 1s;
+    }
+  }
+}
 
 @keyframes higlight {
   10% {
-    background-color: #FAFAD2; }
+      background-color: $lightgoldrodyellow;
+  }
   100% {
-    background-color: none; } }
+    background-color: none;
+  }
+}
 
 .grid-item1 {
-  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/frente.jpg"); }
+  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/frente.jpg");
+}
 
 .grid-item2 {
-  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/restaurant.jpg"); }
+  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/restaurant.jpg");
+}
 
 .grid-item3 {
-  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/estacionamiento.jpg"); }
+  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/estacionamiento.jpg");
+}
 
 .grid-item4 {
-  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/sala.jpg"); }
+  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/sala.jpg");
+}
 
 .containerMapa {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%; }
+  padding-top: 56.25%;
+}
 
 .responsive-iframe {
   position: absolute;
@@ -140,91 +170,129 @@ header {
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 footer {
   align-items: center;
   background-color: #000000DD;
-  border-top: 1px solid #A45D5D;
+  border-top: 1px solid $red;
   display: flex;
   flex-direction: row;
-  justify-content: space-around; }
-  footer p {
-    color: #EFEFEF; }
-  footer li {
+  justify-content: space-around;
+  & p {
+    color: $white;
+  };
+  & li {
     list-style-type: none;
     display: inline-block;
-    padding: 10px; }
-    footer li img {
-      filter: invert(1); }
+    padding: 10px;
+    & img {
+      filter: invert(1);
+    }
+  }
+}
+
 
 /*vista tablet*/
-@media only screen and (min-width: 767px) and (max-width: 930px) {
+@media only screen and (min-width:767px) and (max-width:930px) {
   .titulo {
     font-size: 64px;
-    padding: 20px; }
+    padding: 20px;
+  }
+
   .subtitulo {
     font-size: 36px;
-    padding: 0px 10px; }
+    padding: 0px 10px;
+  }
+
   .grid-item p {
     font-size: 18px;
-    line-height: 1.4; }
+    line-height: 1.4;
+  }
+
   .navdiv nav div ul a {
-    color: #DAA520;
+    color: $goldrod;
     display: inline-block;
     font-family: PirateOne;
     font-size: 28px;
-    padding: 10px 20px; } }
+    padding: 10px 20px;
+  }
+}
 
 /*vista mobil*/
-@media only screen and (min-width: 0px) and (max-width: 767px) {
+@media only screen and (min-width:0px) and (max-width:767px) {
   header {
-    border-bottom: 0px; }
+    border-bottom: 0px;
+  }
+
   .titulo {
-    display: none; }
+    display: none;
+  }
+
   .navdiv nav div ul a {
-    font-size: 22px; }
+    font-size: 22px;
+  }
+
   .navbar {
-    padding: 0px 10px; }
+    padding: 0px 10px;
+  }
+
   .logo {
-    border: 3px solid #EFEFEF;
-    color: #EFEFEF;
+    border: 3px solid $white;
+    color: $white;
     display: inline-block;
     height: 70px;
     width: 60px;
     margin: 55px 0px 5px 0px;
     padding: 3px;
-    border-radius: 0px 0px 100px 100px; }
+    border-radius: 0px 0px 100px 100px;
+  }
+
   .logo img {
     filter: invert(1);
     height: 55px;
     width: 60px;
     position: absolute;
     top: 0px;
-    left: 10px; }
+    left: 10px;
+  }
+
   .logo h1 {
     font-family: serif;
     font-size: 40px;
     font-weight: bolder;
     line-height: 30px;
-    margin: 0px; }
+    margin: 0px;
+  }
+
+  .H {}
+
   .V {
-    text-align: right; }
+    text-align: right;
+  }
+
   .fondoHotel {
     background-image: url("../assets/img/bg.png");
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 1px solid #A45D5D;
-    height: 120vw; }
+    border: 1px solid $red;
+    height: 120vw;
+  }
+
   .grid-container {
     display: flex;
     flex-direction: column;
     grid-gap: 10px;
     grid-template-columns: auto;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+  }
+
   .subtitulo {
-    font-size: 36px; }
+    font-size: 36px;
+  }
+
   .grid-item {
     align-items: center;
     background-repeat: no-repeat;
@@ -232,24 +300,38 @@ footer {
     border-radius: 10px;
     flex-direction: column;
     margin: 5px;
-    padding: 5px; }
+    padding: 5px;
+  }
+
   .grid-item p {
     font-size: 18px;
     line-height: 1;
-    text-align: left; }
+    text-align: left;
+  }
+
   .grid-item1 {
     height: 110vw;
-    width: 90vw; }
+    width: 90vw;
+  }
+
   .grid-item2 {
     height: 110vw;
-    width: 90vw; }
+    width: 90vw;
+  }
+
   .grid-item3 {
     height: 110vw;
-    width: 90vw; }
+    width: 90vw;
+  }
+
   .grid-item4 {
     height: 110vw;
-    width: 90vw; }
+    width: 90vw;
+  }
+
   footer ul {
     margin: 0px;
     padding: 0px;
-    width: 100%; } }
+    width: 100%;
+  }
+}
