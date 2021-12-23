@@ -93,8 +93,13 @@ header {
   height: 45vw;
 }
 
+.main_section {
+  min-height: 85vh;
+}
+
 .hero-text {
   text-align: center;
+  padding: 50px;
 }
 
 .grid-container {
@@ -114,7 +119,6 @@ header {
   height: 460px;
   justify-content: space-evenly;
   margin: 20px;
-  padding: 100px;
   & p {
     background-image: linear-gradient(#00000055, #00000055);
     border-radius: 5px;
@@ -140,20 +144,18 @@ header {
   }
 }
 
-.grid-item1 {
-  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/frente.jpg");
-}
+$gridItems: (
+  frente: frente,
+  restaurant: restaurant,
+  estacionamiento: estacionamiento,
+  sala: sala
+);
 
-.grid-item2 {
-  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/restaurant.jpg");
-}
-
-.grid-item3 {
-  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/estacionamiento.jpg");
-}
-
-.grid-item4 {
-  background-image: linear-gradient(#00000055, #00000055), url("../assets/img/sala.jpg");
+@each $gridItem, $itemLink in $gridItems {
+  .grid-item--#{$gridItem} {
+    @extend .grid-item;
+    background-image: linear-gradient(#00000055, #00000055), url("../assets/img/#{$itemLink}.jpg");
+  }
 }
 
 .containerMapa {
@@ -171,6 +173,16 @@ header {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+.btn-form {
+  background-color: $goldrod;
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
+  &:hover {
+    background-color: $palegoldrod;
+  }
 }
 
 footer {
@@ -193,9 +205,16 @@ footer {
   }
 }
 
+/*map de tamaños*/
+$responsiveSize: (
+  mobilMin: 0px,
+  mobilMax: 767px,
+  tabletMin: 768px,
+  tabletMax: 930px
+);
 
 /*vista tablet*/
-@media only screen and (min-width:767px) and (max-width:930px) {
+@media only screen and (min-width:map-get($responsiveSize, tabletMin)) and (max-width:map-get($responsiveSize, tabletMax)) {
   .titulo {
     font-size: 64px;
     padding: 20px;
@@ -221,7 +240,7 @@ footer {
 }
 
 /*vista mobil*/
-@media only screen and (min-width:0px) and (max-width:767px) {
+@media only screen and (min-width:map-get($responsiveSize, mobilMin)) and (max-width:map-get($responsiveSize, mobilMax)) {
   header {
     border-bottom: 0px;
   }
@@ -282,6 +301,7 @@ footer {
   }
 
   .grid-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
     grid-gap: 10px;
@@ -309,24 +329,10 @@ footer {
     text-align: left;
   }
 
-  .grid-item1 {
-    height: 110vw;
-    width: 90vw;
-  }
-
-  .grid-item2 {
-    height: 110vw;
-    width: 90vw;
-  }
-
-  .grid-item3 {
-    height: 110vw;
-    width: 90vw;
-  }
-
-  .grid-item4 {
-    height: 110vw;
-    width: 90vw;
+  @each $gridItem, $itemLink in $gridItems {
+    .grid-item--#{$gridItem} {
+      width: 90vw;
+    }
   }
 
   footer ul {

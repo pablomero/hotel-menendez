@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: sans-serif;
   margin: 0px;
@@ -76,15 +77,19 @@ header {
   border: 1px solid #A45D5D;
   height: 45vw; }
 
+.main_section {
+  min-height: 85vh; }
+
 .hero-text {
-  text-align: center; }
+  text-align: center;
+  padding: 50px; }
 
 .grid-container {
   display: grid;
   grid-template-columns: 45vw 45vw;
   justify-content: center; }
 
-.grid-item {
+.grid-item, .grid-item--frente, .grid-item--restaurant, .grid-item--estacionamiento, .grid-item--sala {
   align-items: end;
   background-position: center;
   background-repeat: no-repeat;
@@ -94,9 +99,8 @@ header {
   flex-direction: column;
   height: 460px;
   justify-content: space-evenly;
-  margin: 20px;
-  padding: 100px; }
-  .grid-item p {
+  margin: 20px; }
+  .grid-item p, .grid-item--frente p, .grid-item--restaurant p, .grid-item--estacionamiento p, .grid-item--sala p {
     background-image: linear-gradient(#00000055, #00000055);
     border-radius: 5px;
     color: #EFEFEF;
@@ -105,7 +109,7 @@ header {
     padding: 10px;
     text-align: justify;
     text-shadow: #000000 2px 2px; }
-    .grid-item p:hover {
+    .grid-item p:hover, .grid-item--frente p:hover, .grid-item--restaurant p:hover, .grid-item--estacionamiento p:hover, .grid-item--sala p:hover {
       animation-name: higlight;
       animation-duration: 1s; }
 
@@ -115,16 +119,16 @@ header {
   100% {
     background-color: none; } }
 
-.grid-item1 {
+.grid-item--frente {
   background-image: linear-gradient(#00000055, #00000055), url("../assets/img/frente.jpg"); }
 
-.grid-item2 {
+.grid-item--restaurant {
   background-image: linear-gradient(#00000055, #00000055), url("../assets/img/restaurant.jpg"); }
 
-.grid-item3 {
+.grid-item--estacionamiento {
   background-image: linear-gradient(#00000055, #00000055), url("../assets/img/estacionamiento.jpg"); }
 
-.grid-item4 {
+.grid-item--sala {
   background-image: linear-gradient(#00000055, #00000055), url("../assets/img/sala.jpg"); }
 
 .containerMapa {
@@ -142,6 +146,14 @@ header {
   width: 100%;
   height: 100%; }
 
+.btn-form {
+  background-color: #DAA520;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold; }
+  .btn-form:hover {
+    background-color: #EEE8AA; }
+
 footer {
   align-items: center;
   background-color: #000000DD;
@@ -158,15 +170,16 @@ footer {
     footer li img {
       filter: invert(1); }
 
+/*map de tamaños*/
 /*vista tablet*/
-@media only screen and (min-width: 767px) and (max-width: 930px) {
+@media only screen and (min-width: 768px) and (max-width: 930px) {
   .titulo {
     font-size: 64px;
     padding: 20px; }
   .subtitulo {
     font-size: 36px;
     padding: 0px 10px; }
-  .grid-item p {
+  .grid-item p, .grid-item--frente p, .grid-item--restaurant p, .grid-item--estacionamiento p, .grid-item--sala p {
     font-size: 18px;
     line-height: 1.4; }
   .navdiv nav div ul a {
@@ -218,6 +231,7 @@ footer {
     border: 1px solid #A45D5D;
     height: 120vw; }
   .grid-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
     grid-gap: 10px;
@@ -225,7 +239,7 @@ footer {
     justify-content: flex-start; }
   .subtitulo {
     font-size: 36px; }
-  .grid-item {
+  .grid-item, .grid-item--frente, .grid-item--restaurant, .grid-item--estacionamiento, .grid-item--sala {
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,21 +247,17 @@ footer {
     flex-direction: column;
     margin: 5px;
     padding: 5px; }
-  .grid-item p {
+  .grid-item p, .grid-item--frente p, .grid-item--restaurant p, .grid-item--estacionamiento p, .grid-item--sala p {
     font-size: 18px;
     line-height: 1;
     text-align: left; }
-  .grid-item1 {
-    height: 110vw;
+  .grid-item--frente {
     width: 90vw; }
-  .grid-item2 {
-    height: 110vw;
+  .grid-item--restaurant {
     width: 90vw; }
-  .grid-item3 {
-    height: 110vw;
+  .grid-item--estacionamiento {
     width: 90vw; }
-  .grid-item4 {
-    height: 110vw;
+  .grid-item--sala {
     width: 90vw; }
   footer ul {
     margin: 0px;
