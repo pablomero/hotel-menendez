@@ -1,8 +1,9 @@
 @charset "UTF-8";
 * {
+  box-sizing: border-box;
   font-family: sans-serif;
-  margin: 0px;
-  padding: 0px; }
+  margin: 0;
+  padding: 0; }
 
 li {
   list-style: none; }
@@ -36,18 +37,18 @@ header {
 
 .subtitulo {
   background-color: #B8860B;
-  border-radius: 10px;
   color: #000000;
-  display: inline-block;
   font-family: PirateOne;
-  font-size: 48px;
-  padding: 0px 10px;
+  font-size: 64px;
+  margin: 0;
+  padding: 40px 0;
+  text-align: center;
   text-shadow: 3px 3px 10px #A45D5D; }
 
 .navdiv {
   background-color: #000000DD;
   position: sticky;
-  top: 0px;
+  top: 0;
   width: 100%; }
   .navdiv nav div ul {
     display: flex;
@@ -59,7 +60,7 @@ header {
       display: inline-block;
       font-family: PirateOne;
       font-size: 32px;
-      padding: 0px 40px; }
+      padding: 0 40px; }
       .navdiv nav div ul a:hover {
         color: #FFD700;
         text-shadow: 3px 3px 10px #A45D5D; }
@@ -84,34 +85,42 @@ header {
   text-align: center;
   padding: 50px; }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 45vw 45vw;
-  justify-content: center; }
+.hero-text {
+  text-align: center;
+  padding: 50px; }
+
+article div {
+  margin-bottom: 10px; }
+
+.grid-row {
+  display: flex;
+  flex-direction: row; }
+
+p.grid-item, p.grid-item--frente, p.grid-item--restaurant, p.grid-item--estacionamiento, p.grid-item--sala {
+  background-image: linear-gradient(#00000055, #00000055);
+  color: #EFEFEF;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 50px;
+  text-align: justify;
+  text-shadow: #000000 2px 2px; }
+
+.rowreverse {
+  flex-direction: row-reverse; }
 
 .grid-item, .grid-item--frente, .grid-item--restaurant, .grid-item--estacionamiento, .grid-item--sala {
-  align-items: end;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
   height: 460px;
-  justify-content: space-evenly;
-  margin: 20px; }
-  .grid-item p, .grid-item--frente p, .grid-item--restaurant p, .grid-item--estacionamiento p, .grid-item--sala p {
-    background-image: linear-gradient(#00000055, #00000055);
-    border-radius: 5px;
-    color: #EFEFEF;
-    font-size: 20px;
-    line-height: 1.5;
-    padding: 10px;
-    text-align: justify;
-    text-shadow: #000000 2px 2px; }
-    .grid-item p:hover, .grid-item--frente p:hover, .grid-item--restaurant p:hover, .grid-item--estacionamiento p:hover, .grid-item--sala p:hover {
-      animation-name: higlight;
-      animation-duration: 1s; }
+  width: 50vw; }
+
+.container-fluid {
+  display: flex;
+  flex-direction: column; }
+  .container-fluid .grid-item, .container-fluid .grid-item--frente, .container-fluid .grid-item--restaurant, .container-fluid .grid-item--estacionamiento, .container-fluid .grid-item--sala {
+    height: auto;
+    margin: 10px 0px;
+    width: 100%; }
+  .container-fluid .subtitulo {
+    padding: 10px; }
 
 @keyframes higlight {
   10% {
@@ -120,15 +129,27 @@ header {
     background-color: none; } }
 
 .grid-item--frente {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: linear-gradient(#00000055, #00000055), url("../assets/img/frente.jpg"); }
 
 .grid-item--restaurant {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: linear-gradient(#00000055, #00000055), url("../assets/img/restaurant.jpg"); }
 
 .grid-item--estacionamiento {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: linear-gradient(#00000055, #00000055), url("../assets/img/estacionamiento.jpg"); }
 
 .grid-item--sala {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: linear-gradient(#00000055, #00000055), url("../assets/img/sala.jpg"); }
 
 .containerMapa {
@@ -178,8 +199,8 @@ footer {
     padding: 20px; }
   .subtitulo {
     font-size: 36px;
-    padding: 0px 10px; }
-  .grid-item p, .grid-item--frente p, .grid-item--restaurant p, .grid-item--estacionamiento p, .grid-item--sala p {
+    padding: 20px 0; }
+  p.grid-item, p.grid-item--frente, p.grid-item--restaurant, p.grid-item--estacionamiento, p.grid-item--sala {
     font-size: 18px;
     line-height: 1.4; }
   .navdiv nav div ul a {
@@ -190,37 +211,37 @@ footer {
     padding: 10px 20px; } }
 
 /*vista mobil*/
-@media only screen and (min-width: 0px) and (max-width: 767px) {
+@media only screen and (min-width: 0) and (max-width: 767px) {
   header {
-    border-bottom: 0px; }
+    border-bottom: 0; }
   .titulo {
     display: none; }
   .navdiv nav div ul a {
     font-size: 22px; }
   .navbar {
-    padding: 0px 10px; }
+    padding: 0 10px; }
   .logo {
     border: 3px solid #EFEFEF;
     color: #EFEFEF;
     display: inline-block;
     height: 70px;
     width: 60px;
-    margin: 55px 0px 5px 0px;
+    margin: 55px 0 5px;
     padding: 3px;
-    border-radius: 0px 0px 100px 100px; }
+    border-radius: 0 0 100px 100px; }
   .logo img {
     filter: invert(1);
     height: 55px;
     width: 60px;
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 10px; }
   .logo div {
     font-family: serif;
     font-size: 40px;
     font-weight: bolder;
     line-height: 30px;
-    margin: 0px; }
+    margin: 0; }
   .V {
     text-align: right; }
   .fondoHotel {
@@ -230,36 +251,22 @@ footer {
     background-size: cover;
     border: 1px solid #A45D5D;
     height: 120vw; }
-  .grid-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    grid-gap: 10px;
-    grid-template-columns: auto;
-    justify-content: flex-start; }
   .subtitulo {
     font-size: 36px; }
-  .grid-item, .grid-item--frente, .grid-item--restaurant, .grid-item--estacionamiento, .grid-item--sala {
-    align-items: center;
+  .rowreverse {
+    flex-direction: column; }
+  .grid-row {
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 10px;
-    flex-direction: column;
-    margin: 5px;
-    padding: 5px; }
-  .grid-item p, .grid-item--frente p, .grid-item--restaurant p, .grid-item--estacionamiento p, .grid-item--sala p {
+    flex-direction: column; }
+  .grid-item, .grid-item--frente, .grid-item--restaurant, .grid-item--estacionamiento, .grid-item--sala {
+    width: 100vw; }
+  p.grid-item, p.grid-item--frente, p.grid-item--restaurant, p.grid-item--estacionamiento, p.grid-item--sala {
     font-size: 18px;
+    height: 250px;
     line-height: 1;
-    text-align: left; }
-  .grid-item--frente {
-    width: 90vw; }
-  .grid-item--restaurant {
-    width: 90vw; }
-  .grid-item--estacionamiento {
-    width: 90vw; }
-  .grid-item--sala {
-    width: 90vw; }
+    margin-bottom: 0; }
   footer ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     width: 100%; } }
