@@ -137,19 +137,21 @@ p.grid-item {
   height: 460px;
   width: 50vw;
 }
+
 .container-fluid {
   display: flex;
   flex-direction: column;
+
   & .grid-item {
     height: auto;
-    margin: 10px 0px;
+    margin: 10px 0;
     width: 100%;
   }
+
   & .subtitulo {
     padding: 10px;
   }
 }
-
 @keyframes higlight {
   10% {
     background-color: $lightgoldrodyellow;

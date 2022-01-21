@@ -117,7 +117,7 @@ p.grid-item, p.grid-item--frente, p.grid-item--restaurant, p.grid-item--estacion
   flex-direction: column; }
   .container-fluid .grid-item, .container-fluid .grid-item--frente, .container-fluid .grid-item--restaurant, .container-fluid .grid-item--estacionamiento, .container-fluid .grid-item--sala {
     height: auto;
-    margin: 10px 0px;
+    margin: 10px 0;
     width: 100%; }
   .container-fluid .subtitulo {
     padding: 10px; }
