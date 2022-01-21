@@ -165,7 +165,9 @@ $gridItems: (
   frente: frente,
   restaurant: restaurant,
   estacionamiento: estacionamiento,
-  sala: sala
+  sala: sala,
+  cuarto: cuarto,
+  bar: bar
 );
 @each $gridItem, $itemLink in $gridItems {
   .grid-item--#{$gridItem} {
